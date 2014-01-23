@@ -1,0 +1,36 @@
+CREATE TABLE kilpailu ( 
+id SERIAL NOT NULL, 
+Paivamaara DATE NOT NULL,
+nimi TEXT NOT NULL,
+tunnus TEXT NOT NULL, 
+salasana TEXT NOT NULL,  
+PRIMARY KEY (id) 
+); 
+
+CREATE TABLE sarja ( 
+id SERIAL NOT NULL, 
+kilpailu INTEGER NOT NULL, 
+nimi TEXT NOT NULL, 
+FOREIGN KEY (kilpailu) REFERENCES kilpailu(id) 
+ON UPDATE CASCADE 
+ON DELETE CASCADE, 
+PRIMARY KEY (id) 
+); 
+
+CREATE TABLE tulos (
+id SERIAL NOT NULL, 
+sarja INTEGER NOT NULL, 
+nimi TEXT NOT NULL,
+seura TEXT NOT NULL,
+emit  VARCHAR(8) NOT NULL, 
+loppuaika TIME NOT NULL, 
+FOREIGN KEY (sarja) REFERENCES sarja(id) 
+ON UPDATE CASCADE 
+ON DELETE CASCADE, 
+PRIMARY KEY (id) 
+); 
+
+
+
+
+
