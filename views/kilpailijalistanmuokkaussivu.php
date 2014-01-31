@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Lopputulokset</title>
+<title>Tulosten muokkaussivu</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet">
         <script src="javascript/jquery.min.js"></script>
@@ -8,9 +8,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi">Etusivu</a>
-          <a href="http://jtlahti.users.cs.helsinki.fi/kilpailunsarjat.html">Sarjat</a>
-        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/loginkilpailija.php">Muokkaa lopputuloksia</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/logoutkilpailija.php">Kirjaudu ulos</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>
@@ -21,7 +19,8 @@
           <th>Sijoitus</th>
           <th>Nimi</th>
           <th>Seura</th>
-          <th>Lopputulos</th>      
+          <th>Lopputulos</th>
+           
         </tr>
       </thead>
       
@@ -31,9 +30,12 @@
           <td>Matti Meikäläinen</td>
           <td>Kuusankosken Urheiluseura</td>
           <td>42:15,5</td>
+          <td><a href="http://jtlahti.users.cs.helsinki.fi/muokkaatulosta.html">Muokkaa tuloksia</a></th>  
         </tr>
         </tbody>
        </table>
+       
+       <a href="http://jtlahti.users.cs.helsinki.fi/lisaatulos.html">Lisää tulos</a>
 
 </body>
 </html>

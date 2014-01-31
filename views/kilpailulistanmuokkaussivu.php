@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi/tietokantasovellus/logout.php">Kirjaudu ulos</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/logoutkilpailu.php">Kirjaudu ulos</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>

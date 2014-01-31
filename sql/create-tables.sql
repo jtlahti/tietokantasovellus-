@@ -1,3 +1,10 @@
+CREATE TABLE yllapidontunnukset (
+id SERIAL NOT NULL,
+tunnus TEXT NOT NULL,
+salasana TEXT NOT NULL,
+PRIMARY KEY (id)
+);    
+
 CREATE TABLE kilpailu ( 
 id SERIAL NOT NULL, 
 Paivamaara DATE NOT NULL,

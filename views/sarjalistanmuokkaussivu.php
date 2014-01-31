@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Kilpailulistan muokkaussivu</title>
+<title>Kilpailun sarjat</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet">
         <script src="javascript/jquery.min.js"></script>
@@ -8,29 +8,25 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi/tietokantasovellus/logout.php">Kirjaudu ulos</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/logoutsarja.php">Kirjaudu ulos</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>
-  <h2>Kilpailut</h2>
+  <h2>Sarjat</h2>
   <table class="table table-striped">
       <thead>
         <tr>
-        <th>Päivämäärä</th>
-        <th>Kilpailun nimi</th>
-        
+          <th>Nimi</th>
         </tr>
       </thead>
       
        <tbody>
         <tr>
-        <td>1.1.2014</td>
-        <td>Testikilpailu</td>
-        <td><a href="http://jtlahti.users.cs.helsinki.fi/muokkaakilpailua.html">Muokkaa kilpailua</a> 
+          <td>H21</td>
+          <td><a href="http://jtlahti.users.cs.helsinki.fi/sarjanuudelleennimeäminen.html">Uudelleennimeä sarja</a> 
         </tr>
         </tbody>
        </table>
-       <a href="http://jtlahti.users.cs.helsinki.fi/lisaakilpailu.html">Lisää kilpailu</a> 
-    
+        <a href="http://jtlahti.users.cs.helsinki.fi/lisaasarja.html">Lisää sarja</a>
 </body>
 </html>
