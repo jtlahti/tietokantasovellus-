@@ -28,3 +28,5 @@ $uudettiedot->loppuaika = $_POST["tulos"];
   
 $uudettiedot->updatekilpailija();
 
+header('Location: kilpailijanmuokkaus.php');
+
