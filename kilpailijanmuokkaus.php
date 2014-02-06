@@ -7,4 +7,4 @@
      exit;
   }
 
-require 'views/kilpailijalistanmuokkaussivu.php';
+require 'järjestäkilpailijat.php';
