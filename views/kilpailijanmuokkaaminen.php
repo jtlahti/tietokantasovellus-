@@ -15,11 +15,12 @@
 
  <form action="updatekilpailija.php" method="POST">
 
+<input type="hidden" name="id" value="<?php echo $data->kilpailijanmuokkaaminen->id; ?>">
+     
 <p>Sarja: <br>
 <select name="sarja">
   <option value="1">H21</option>  
 </select> 
-
 <p>Nimi: <br>
 <input type="text" name="nimi" value="<?php echo $data->kilpailijanmuokkaaminen->nimi; ?>"></p>
 <p>Seura: <br>

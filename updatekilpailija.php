@@ -20,6 +20,7 @@
   } 
 
 $uudettiedot = new kilpailijantiedot();
+$uudettiedot->id = $_POST["id"];
 $uudettiedot->sarja = $_POST["sarja"];
 $uudettiedot->nimi = $_POST["nimi"];
 $uudettiedot->seura = $_POST["seura"];
