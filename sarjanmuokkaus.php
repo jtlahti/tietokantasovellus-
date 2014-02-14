@@ -7,7 +7,16 @@
      exit;
   }
 
-require 'views/sarjalistanmuokkaussivu.php';
+ require_once 'libs/utilities.php';
+ require_once 'libs/models/sarjantiedot.php';
+
+    $lista = sarjantiedot::getsarjat();
+ 
+ naytaNakyma("sarjalistanmuokkaussivu", array(
+    
+    "lista"=> $lista   
+    ));
+
 
 
 

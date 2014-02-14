@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>Kilpailun sarjat</title>
@@ -8,7 +9,8 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/logoutsarja.php">Kirjaudu ulos</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi">Etusivu</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/sarjanmuokkaus.php">Muokkaa kilpailusarjoja</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>
@@ -20,15 +22,17 @@
         </tr>
       </thead>
       
-      <tbody>
+       <tbody>
         <?php foreach($data->lista as $asia): ?>
        <tr>     
        <td><?php echo $asia->nimi; ?></td>
-       <td><a href="updatesarja.php?id=<?php echo $asia->id; ?>">muokkaa</a></td>
+       <td><a href="lopputulokset.php?id=<?php echo $asia->id; ?>">tulokset</a></td>
        </tr>
        <?php endforeach; ?>        
         </tbody>
        </table>
-        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/lisaasarja.php">Lisää sarja</a>
+
 </body>
 </html>
+
+

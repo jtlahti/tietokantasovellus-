@@ -11,7 +11,7 @@ require_once 'libs/utilities.php';
 require_once 'libs/models/kilpailijantiedot.php';
   
     if (empty($_POST)) {
-        naytaNakyma("lisaakilpailija");
+        naytaNakyma("kilpailijanlisaaminen");
     }
 
 
@@ -23,8 +23,8 @@ $uusikilpailija->emit = $_POST["emit"];
 $uusikilpailija->loppuaika = $_POST["loppuaika"];
 
 
-$uusikilpailija->putkilpailija();   
+$uusikilpailija->putkilpailija();
 
-header('Location: kilpailijanmuokkaus.php');
+header('Location: kilpailijanmuokkaus.php?id="$data->sarja"');
   
   

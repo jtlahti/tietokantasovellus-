@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Lisää tulos</title>
+<title>Lisää sarja</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet">
         <script src="javascript/jquery.min.js"></script>
@@ -8,28 +8,23 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-       
+        
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>
-  <h2>Lisää tulos</h2>
+  <h2>Lisää sarja</h2>
+
   
-  <form action="lisaakilpailija.php" method="POST">
+<form action="lisaasarja.php" method="POST">
   
-<input type="hidden" name="sarja" value="<?php echo $data->sarja; ?>"/>
-  
+<p>Kilpailu: <br>
+<select name="kilpailu">
+  <option value="1">Testikilpailu</option>  
+</select> 
+      
 <p>Nimi: <br>
 <input type="text" name="nimi"></p>
-<p>Seura: <br>
-<input type="text" name="seura"></p>
-<p>Emit: <br>
-<input type="text" name="emit"></p>
-<p>Lopputulos: <br>
-<input type="text" name="loppuaika"></p>
-<input type="submit" value="Lisää tulos">
+<input type="submit" value="Lisää sarja">
 </form>
 </body>
 </html>
-
-
-

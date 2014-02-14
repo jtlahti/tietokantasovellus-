@@ -15,12 +15,9 @@
 
  <form action="updatekilpailija.php" method="POST">
 
-<input type="hidden" name="id" value="<?php echo $data->kilpailijanmuokkaaminen->id; ?>">
+<input type="hidden" name="id" value="<?php echo $data->kilpailijanmuokkaaminen->id; ?>"/>
      
-<p>Sarja: <br>
-<select name="sarja">
-  <option value="1">H21</option>  
-</select> 
+<input type="hidden" name="sarja" value="<?php echo $data->sarja; ?>"/>
 <p>Nimi: <br>
 <input type="text" name="nimi" value="<?php echo $data->kilpailijanmuokkaaminen->nimi; ?>"></p>
 <p>Seura: <br>
@@ -30,7 +27,8 @@
 <p>Lopputulos: <br>
 <input type="text" name="tulos" value="<?php echo $data->kilpailijanmuokkaaminen->loppuaika; ?>"></p>
 
-<input type="submit" value="Tallenna">
-<input type="submit" value="Poista">
+<input type="submit" name="tallenna" value="Tallenna">
+<input type="submit" name="poista" value="Poista">
+ </form>
 </body>
 </html>

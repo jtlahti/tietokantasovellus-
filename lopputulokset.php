@@ -1,14 +1,14 @@
 <?php
 
-
-
  require_once 'libs/utilities.php';
  require_once 'libs/models/kilpailijantiedot.php';
 
-    $lista = kilpailijantiedot::getkilpailijat();
+$sarja =$_GET['id'];
+
+ $lista = kilpailijantiedot::getkilpailijat($sarja);
  
  naytaNakyma("lopputulostensivu", array(
     
-    "lista"=> $lista
-   
+    "lista"=> $lista,
+    "sarja"=>$sarja     
     ));

@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation"> 
-<a href="http://jtlahti.users.cs.helsinki.fi/kilpailunsarjat.html">Takaisin</a>
+<a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/sarjat.php">Takaisin</a>
 </nav>
 
 <?php if (!empty($data->virhe)): ?>

@@ -21,10 +21,10 @@ public function putkilpailija() {
     return $ok;
 }
 
-public static function getkilpailijat() {
-    $sql = "SELECT * from tulos ORDER BY loppuaika";
+public static function getkilpailijat($sarja) {
+    $sql = "SELECT * from tulos where sarja = ? ORDER BY loppuaika";
     $kysely = getTietokantayhteys()->prepare($sql);
-    $kysely->execute();
+    $kysely->execute(array($sarja));
     
     $tulokset = array();
     
@@ -48,14 +48,11 @@ public function updatekilpailija() {
 }
 
 public function deletekilpailija() {
-    $sql = "DELELE from tulos where id= ?" ;
-    
+    $sql = "DELETE from tulos where id=?" ;
+   
     $kysely = getTietokantayhteys()->prepare($sql);
-    $ok=$kysely->execute(array($this->sarja, $this->nimi, $this->seura,$this->emit,$this->loppuaika));
+    $ok=$kysely->execute(array($this->id));
     
-     if ($ok) {     
-      $this->id = $kysely->fetchColumn();
-    }
     return $ok;
 }
 
@@ -91,3 +88,4 @@ public function __construct($id,$sarja,$nimi,$seura,$emit,$loppuaika) {
     $this->loppuaika = $loppuaika;
 }
 }
+

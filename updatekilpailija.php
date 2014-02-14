@@ -16,8 +16,7 @@
     naytaNakyma("kilpailijanmuokkaaminen", array(
       'kilpailijanmuokkaaminen' => $kilpailija,
     ));
-    
-  } 
+  }
 
 $uudettiedot = new kilpailijantiedot();
 $uudettiedot->id = $_POST["id"];
@@ -27,7 +26,13 @@ $uudettiedot->seura = $_POST["seura"];
 $uudettiedot->emit = $_POST["emit"];
 $uudettiedot->loppuaika = $_POST["tulos"];
   
+if ($_POST["tallenna"]) {
 $uudettiedot->updatekilpailija();
-
 header('Location: kilpailijanmuokkaus.php');
+}
+
+if ($_POST['poista']) {
+$uudettiedot->deletekilpailija();
+header('Location: kilpailijanmuokkaus.php');
+}
 

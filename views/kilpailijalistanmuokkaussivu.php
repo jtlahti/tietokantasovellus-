@@ -40,7 +40,7 @@
        </tbody>
        </table>
        
-       <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/lisaakilpailija.php">Lisää tulos</a>
+       <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/lisaakilpailija.php?id=<?php echo $asia->sarja; ?>">Lisää tulos</a>
  
 </body>
 </html>
