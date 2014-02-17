@@ -13,9 +13,9 @@
   <h1>Suunnistustulospalvelu</h1>
   <h2>Sarjan uudelleennimeäminen</h2>
   
-  <form action="updatesarja.php" method="POST">
+<form action="updatesarja.php" method="POST">
 
-  <input type="hidden" name="id" value="<?php echo $data->sarjanmuokkaaminen->id; ?>"/>
+<input type="hidden" name="id" value="<?php echo $data->sarjanmuokkaaminen->id; ?>"/>
 
 <p>Kilpailu: <br>
 <select name="kilpailu">

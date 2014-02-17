@@ -20,10 +20,10 @@ class sarjantiedot {
     
     
     
-    public static function getsarjat() {
-        $sql = "SELECT * from sarja";
+    public static function getsarjat($kilpailu) {
+        $sql = "SELECT * from sarja where kilpailu = ?";
         $kysely = getTietokantayhteys()->prepare($sql);
-        $kysely->execute();
+        $kysely->execute(array($kilpailu));
         
         $tulokset = array();
     

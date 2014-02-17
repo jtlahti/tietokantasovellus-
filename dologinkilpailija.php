@@ -2,7 +2,7 @@
   
     require_once 'libs/utilities.php';
     require_once 'libs/models/tunnukset.php';
-  
+    
 
     if (empty($_POST["username"]) && empty($_POST["password"]) ) {
 
@@ -28,7 +28,7 @@
   if (sarja::gettunnukset($tunnus, $salasana)) {
     $_SESSION['kirjautunut'] = $tunnus;
    
-    header("Location: kilpailijanmuokkaus.php?id=".$sarja);
+    header("Location: kilpailijanmuokkaus.php");
   } else {
     
      naytaNakyma("kirjautuminenkilpailija", array(

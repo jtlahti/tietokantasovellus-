@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Kilpailulistan muokkaussivu</title>
+<title>Etusivu</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet">
         <script src="javascript/jquery.min.js"></script>
@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/logoutkilpailu.php">Kirjaudu ulos</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/loginkilpailu.php">Muokkaa kilpailulistaa</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>
@@ -16,9 +16,8 @@
   <table class="table table-striped">
       <thead>
         <tr>
-        <th>Päivämäärä</th>
-        <th>Nimi</th>
-        
+          <th>Päivämäärä</th>
+          <th>Nimi</th>
         </tr>
       </thead>
       
@@ -27,12 +26,12 @@
         <tr>
         <td><?php echo $asia->paivamaara; ?></td>
         <td><?php echo $asia->nimi; ?></td>
-        <td><a href="updatekilpailu.php?id=<?php echo $asia->id; ?>">muokkaa</a></td>
+        <td><a href="sarjat.php?id=<?php echo $asia->id; ?>">Sarjat</a></td>
         </tr>
         <?php endforeach; ?>   
         </tbody>
        </table>
-       <a href="http://jtlahti.users.cs.helsinki.fi/lisaakilpailu.html">Lisää kilpailu</a> 
     
+  Suunnistustulospalvelu tarjoaa suunnistuskilpailujen lopputulokset sarjoittain. Lisäksi ne, joilla on vaaditut tunnukset, voivat muokata kilpailujen, sarjojen ja tulosten tietoja.
 </body>
 </html>

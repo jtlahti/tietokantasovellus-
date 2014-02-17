@@ -2,12 +2,15 @@
 
  require_once 'libs/utilities.php';
  require_once 'libs/models/sarjantiedot.php';
+ 
+ $kilpailu =$_GET['id'];
 
-    $lista = sarjantiedot::getsarjat();
+    $lista = sarjantiedot::getsarjat($kilpailu);
  
  naytaNakyma("sarjojensivu", array(
     
-    "lista"=> $lista
+    "lista"=> $lista,
+    "kilpailu"=>$kilpailu 
    
     ));
 
