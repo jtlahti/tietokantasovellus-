@@ -25,6 +25,6 @@ $uusikilpailija->loppuaika = $_POST["loppuaika"];
 
 $uusikilpailija->putkilpailija();
 
-header('Location: kilpailijanmuokkaus.php?id="$data->sarja"');
+header('Location: kilpailijanmuokkaus.php?id='.$uusikilpailija->sarja);
   
   

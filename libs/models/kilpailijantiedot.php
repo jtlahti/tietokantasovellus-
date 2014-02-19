@@ -37,7 +37,6 @@ public static function getkilpailijat($sarja) {
     return $tulokset;
 }
 
-
 public function updatekilpailija() {
     $sql = "UPDATE tulos set sarja= ?, nimi= ?, seura= ?, emit=?, loppuaika=? where id = ? " ;
     

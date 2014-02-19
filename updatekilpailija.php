@@ -28,11 +28,11 @@ $uudettiedot->loppuaika = $_POST["tulos"];
   
 if ($_POST["tallenna"]) {
 $uudettiedot->updatekilpailija();
-header('Location: kilpailijanmuokkaus.php');
+header('Location: kilpailijanmuokkaus.php?id='.$uudettiedot->sarja);
 }
 
 if ($_POST['poista']) {
 $uudettiedot->deletekilpailija();
-header('Location: kilpailijanmuokkaus.php');
+header('Location: kilpailijanmuokkaus.php?id='.$uudettiedot->sarja);
 }
 

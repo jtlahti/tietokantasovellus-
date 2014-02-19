@@ -27,12 +27,12 @@ $uudettiedot->nimi = $_POST["nimi"];
   
 if ($_POST["tallenna"]) {
 $uudettiedot->updatesarja();
-header('Location: sarjanmuokkaus.php');
+header('Location: sarjanmuokkaus.php?id='.$uudettiedot->kilpailu);
 }
 
 if ($_POST['poista']) {
 $uudettiedot->deletesarja();
-header('Location: sarjanmuokkaus.php');
+header('Location: sarjanmuokkaus.php?id='.$uudettiedot->kilpailu);
 }
 
 

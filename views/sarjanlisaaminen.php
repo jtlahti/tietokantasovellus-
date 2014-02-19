@@ -16,12 +16,9 @@
 
   
 <form action="lisaasarja.php" method="POST">
-  
-<p>Kilpailu: <br>
-<select name="kilpailu">
-  <option value="1">Testikilpailu</option>  
-</select> 
-      
+
+<input type="hidden" name="sarja" value="<?php echo $data->kilpailu; ?>"/>
+    
 <p>Nimi: <br>
 <input type="text" name="nimi"></p>
 <input type="submit" value="Lisää sarja">

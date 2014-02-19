@@ -9,6 +9,7 @@
  
  naytaNakyma("sarjojensivu", array(
     
+    "kirjautunut" => isset($_SESSION['kirjautunut']),
     "lista"=> $lista,
     "kilpailu"=>$kilpailu 
    

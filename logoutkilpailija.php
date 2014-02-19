@@ -4,4 +4,4 @@ session_start();
   
   unset($_SESSION["kirjautunut"]);
 
-  header('Location: loginkilpailija.php');
+  header('Location: index.php');

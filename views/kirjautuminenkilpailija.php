@@ -16,7 +16,7 @@
 <?php endif; ?>
 
 <h2>Kirjautuminen</h2>
-<form action="dologinkilpailija.php" method="POST">
+<form action="dologinkilpailija.php<?php echo $data->kilpailija; ?>" method="POST">
 Käyttäjänimi: <input type="text" name="username" />
 Salasana: <input type="password" name="password" />
 <button type="submit">Kirjaudu</button>

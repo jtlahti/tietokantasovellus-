@@ -8,9 +8,8 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-        <a href="http://jtlahti.users.cs.helsinki.fi">Etusivu</a>
-          <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/sarjat.php">Sarjat</a>
-        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/loginkilpailija.php">Muokkaa lopputuloksia</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu">Etusivu</a>
+        <a href="http://jtlahti.users.cs.helsinki.fi/suunnistustulospalvelu/kilpailijanmuokkaus.php?id=<?php echo $data->sarja; ?>">Muokkaa lopputuloksia</a>
         </nav>
        
   <h1>Suunnistustulospalvelu</h1>

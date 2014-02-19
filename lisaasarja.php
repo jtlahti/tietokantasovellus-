@@ -20,4 +20,4 @@
 
     $uusisarja->putsarja();
     
-    header('Location: sarjanmuokkaus.php');
+    header('Location: sarjanmuokkaus.php?id='.$uusisarja->kilpailu);
