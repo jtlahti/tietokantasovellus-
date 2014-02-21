@@ -5,7 +5,6 @@ require_once 'libs/models/ytunnukset.php';
 
 
 if (empty($_POST["username"]) && empty($_POST["password"])) {
-
     naytaNakyma("kirjautuminenkilpailu");
     exit();
 }

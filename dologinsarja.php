@@ -6,7 +6,6 @@ require_once 'libs/models/tunnukset.php';
 $sarja = $_GET['id'];
 
 if (empty($_POST["username"]) && empty($_POST["password"])) {
-
     naytaNakyma("kirjautuminensarja", array(
         "sarja" => $sarja
     ));

@@ -28,9 +28,7 @@ $uusikilpailija->loppuaika = $_POST["loppuaika"];
 
 
 $uusikilpailija->insertkilpailija();
-
 $_SESSION['ilmoitus'] = "Kilpailija lisätty onnistuneesti!";
-
 header('Location: kilpailijanmuokkaus.php?id=' . $uusikilpailija->sarja);
 
 

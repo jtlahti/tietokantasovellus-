@@ -29,9 +29,7 @@ class kilpailijantiedot {
         $tulokset = array();
 
         foreach ($kysely->fetchAll(PDO::FETCH_OBJ) as $tulos) {
-
             $kayttaja = new kilpailijantiedot($tulos->id, $tulos->sarja, $tulos->nimi, $tulos->seura, $tulos->emit, $tulos->loppuaika);
-
             $tulokset[] = $kayttaja;
         }
         return $tulokset;
@@ -61,6 +59,7 @@ class kilpailijantiedot {
         $kysely->execute(array($id));
 
         $tulos = $kysely->fetchObject();
+        
         if ($tulos == null) {
             return null;
         } else {
@@ -84,5 +83,4 @@ class kilpailijantiedot {
         $this->emit = $emit;
         $this->loppuaika = $loppuaika;
     }
-
 }

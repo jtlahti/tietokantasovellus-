@@ -7,7 +7,6 @@ require_once 'libs/models/tunnukset.php';
 
 
 if (empty($_POST["username"]) && empty($_POST["password"])) {
-
     naytaNakyma("kirjautuminenkilpailija", array(
         "kilpailija" => $kilpailija
     ));

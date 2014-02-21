@@ -19,7 +19,7 @@ class sarjantiedot {
     }
 
     public static function getsarjat($kilpailu) {
-        $sql = "SELECT * from sarja where kilpailu = ?";
+        $sql = "SELECT * from sarja where kilpailu = ? ORDER BY nimi";
         $kysely = getTietokantayhteys()->prepare($sql);
         $kysely->execute(array($kilpailu));
 
