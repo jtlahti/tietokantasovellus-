@@ -1,28 +1,26 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['ykirjautunut'])) {
 
+    header('Location: loginkipailu.php');
+    exit;
+}
 
- session_start();
-  if (!isset($_SESSION['ykirjautunut'])) {
-    
-     header('Location: loginkipailu.php');
-     exit;
-  }
-  
-  require_once 'libs/utilities.php';
-  require_once 'libs/models/kilpailuntiedot.php';
-  
-      if (empty($_POST)) {
-        naytaNakyma("kilpailunlisaaminen");
-    }
+require_once 'libs/utilities.php';
+require_once 'libs/models/kilpailuntiedot.php';
 
-    $uusikilpailu = new kilpailuntiedot();
-    $uusikilpailu->paivamaara = $_POST["Päivämäärä"];
-    $uusikilpailu->nimi = $_POST["nimi"];
-    $uusikilpailu->tunnus = $_POST["Tunnus"];
-    $uusikilpailu->salasana = $_POST["Salasana"];
+if (empty($_POST)) {
+    naytaNakyma("kilpailunlisaaminen");
+}
 
-    $uusikilpailu->insertkilpailu();
-    
-    header('Location: kilpailunmuokkaus.php');
+$uusikilpailu = new kilpailuntiedot();
+$uusikilpailu->paivamaara = $_POST["Päivämäärä"];
+$uusikilpailu->nimi = $_POST["nimi"];
+$uusikilpailu->tunnus = $_POST["Tunnus"];
+$uusikilpailu->salasana = $_POST["Salasana"];
+
+$uusikilpailu->insertkilpailu();
+$_SESSION['ilmoitus'] = "Kilpailu lisätty onnistuneesti!";
+header('Location: kilpailunmuokkaus.php');
 

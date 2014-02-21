@@ -1,19 +1,18 @@
 <?php
- session_start();
 
-  if (!isset($_SESSION['ykirjautunut'])) {
-    
-     header('Location: loginkilpailu.php');
-     exit;
-  }
+session_start();
 
- require_once 'libs/utilities.php';
- require_once 'libs/models/kilpailuntiedot.php';
+if (!isset($_SESSION['ykirjautunut'])) {
 
-    $lista = kilpailuntiedot::getkilpailut();
- 
- naytaNakyma("kilpailulistanmuokkaussivu", array(
-    
-    "lista"=> $lista
-   
-    ));
+    header('Location: loginkilpailu.php');
+    exit;
+}
+
+require_once 'libs/utilities.php';
+require_once 'libs/models/kilpailuntiedot.php';
+
+$lista = kilpailuntiedot::getkilpailut();
+
+naytaNakyma("kilpailulistanmuokkaussivu", array(
+    "lista" => $lista
+));

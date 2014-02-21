@@ -1,6 +1,7 @@
 <?php
+
 $yhteys = new PDO("pgsql:");
-$yhteys->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$yhteys->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $kysely = $yhteys->prepare("SELECT * FROM kilpailu");
 $kysely->execute();

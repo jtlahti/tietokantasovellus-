@@ -1,22 +1,22 @@
 <?php
 
-  session_start();
-  if (!isset($_SESSION['kirjautunut'])) {
-    
-     header('Location: loginkilpailija.php');
-     exit;
-  }
+session_start();
+if (!isset($_SESSION['kirjautunut'])) {
 
-   require_once 'libs/utilities.php';
-   require_once 'libs/models/kilpailijantiedot.php';
+    header('Location: loginkilpailija.php');
+    exit;
+}
 
-  $id =$_GET['id'];
-  $kilpailija = kilpailijantiedot::etsi($id);
-  if ($kilpailija != null) {
+require_once 'libs/utilities.php';
+require_once 'libs/models/kilpailijantiedot.php';
+
+$id = $_GET['id'];
+$kilpailija = kilpailijantiedot::etsi($id);
+if ($kilpailija != null) {
     naytaNakyma("kilpailijanmuokkaaminen", array(
-      'kilpailijanmuokkaaminen' => $kilpailija,
+        'kilpailijanmuokkaaminen' => $kilpailija,
     ));
-  }
+}
 
 $uudettiedot = new kilpailijantiedot();
 $uudettiedot->id = $_POST["id"];
@@ -25,14 +25,16 @@ $uudettiedot->nimi = $_POST["nimi"];
 $uudettiedot->seura = $_POST["seura"];
 $uudettiedot->emit = $_POST["emit"];
 $uudettiedot->loppuaika = $_POST["tulos"];
-  
+
 if ($_POST["tallenna"]) {
-$uudettiedot->updatekilpailija();
-header('Location: kilpailijanmuokkaus.php?id='.$uudettiedot->sarja);
+    $uudettiedot->updatekilpailija();
+    $_SESSION['ilmoitus'] = "Kilpailijan tietoja muokattu onnistuneesti!";
+    header('Location: kilpailijanmuokkaus.php?id=' . $uudettiedot->sarja);
 }
 
 if ($_POST['poista']) {
-$uudettiedot->deletekilpailija();
-header('Location: kilpailijanmuokkaus.php?id='.$uudettiedot->sarja);
+    $uudettiedot->deletekilpailija();
+    $_SESSION['ilmoitus'] = "Kilpailijan tiedot poistettu onnistuneesti!";
+    header('Location: kilpailijanmuokkaus.php?id=' . $uudettiedot->sarja);
 }
 

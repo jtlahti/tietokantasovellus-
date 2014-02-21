@@ -1,18 +1,22 @@
 <?php
 
-  session_start();
-  if (!isset($_SESSION['kirjautunut'])) {
-    
-     header('Location: loginkilpailija.php');
-     exit;
-  }
+session_start();
+if (!isset($_SESSION['kirjautunut'])) {
+
+    header('Location: loginkilpailija.php');
+    exit;
+}
 
 require_once 'libs/utilities.php';
 require_once 'libs/models/kilpailijantiedot.php';
-  
-    if (empty($_POST)) {
-        naytaNakyma("kilpailijanlisaaminen");
-    }
+
+$sarja = $_GET['id'];
+
+if (empty($_POST)) {
+    naytaNakyma("kilpailijanlisaaminen", array(
+        "sarja" => $sarja
+    ));
+}
 
 
 $uusikilpailija = new kilpailijantiedot();
@@ -23,8 +27,10 @@ $uusikilpailija->emit = $_POST["emit"];
 $uusikilpailija->loppuaika = $_POST["loppuaika"];
 
 
-$uusikilpailija->putkilpailija();
+$uusikilpailija->insertkilpailija();
 
-header('Location: kilpailijanmuokkaus.php?id='.$uusikilpailija->sarja);
-  
-  
+$_SESSION['ilmoitus'] = "Kilpailija lisätty onnistuneesti!";
+
+header('Location: kilpailijanmuokkaus.php?id=' . $uusikilpailija->sarja);
+
+

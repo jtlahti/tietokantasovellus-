@@ -1,3 +1,3 @@
 <?php
 
-  require 'views/kirjautuminenkilpailu.php';
+require 'views/kirjautuminenkilpailu.php';

@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-  
-  unset($_SESSION["ykirjautunut"]);
 
-  header('Location: loginkilpailu.php');
+unset($_SESSION["ykirjautunut"]);
+
+header('Location: index.php');
 
