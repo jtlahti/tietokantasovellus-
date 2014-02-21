@@ -22,9 +22,7 @@ if (empty($_POST["password"])) {
     ));
 }
 
-
 $salasana = $_POST["password"];
-
 
 if (sarja::gettunnukset($tunnus, $salasana)) {
     $_SESSION['kirjautunut'] = $tunnus;
